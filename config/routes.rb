@@ -1,4 +1,9 @@
 Fob::Application.routes.draw do
+  devise_for :users
+
+  root(:to => 'fobs#index')
+  resources(:fobs)
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
